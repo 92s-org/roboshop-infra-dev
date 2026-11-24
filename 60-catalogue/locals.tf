@@ -8,4 +8,7 @@ locals {
         Environment = var.environment
         Terraform = "true"
     }
+    backend_alb_listener_arn = data.aws_ssm_parameter.backend_alb_listener_arn.value
+    vpc_id = data.aws_ssm_parameter.vpc_id.value
+    
 }
